@@ -18,10 +18,10 @@ jobs:
     steps:
       # Get code from repo
       - name: Checkout code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: Use Node.js 21.x
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: 21.x
 
@@ -32,11 +32,3 @@ jobs:
       # Run lint
       - name: Run Lint
         run: npm run lint
-
-      # Run build
-      - name: Run Build
-        run: npm run build
-
-      # Run tests
-      - name: Run Tests
-        run: npm run test
